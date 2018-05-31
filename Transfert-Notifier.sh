@@ -174,7 +174,7 @@ if [ "$heures" -gt "23" ] ; then
 fi
 
 echo ""$jour"Day(s), "$heures"Hour(s) : "$minutes"Minute(s) since the beggening of execution."
-echo "Pc allume depuis `uptime -p`"
+echo "Computer on since `uptime -p`"
 
 if [ "$quart" = "" ] ; then
 export quart="0"
@@ -188,7 +188,7 @@ if [ "$quart" = "15" ] ; then
 	fi
 export SIZETMP="$SIZE"
 	export NBMAIL=$(echo "$NBMAIL"+1 | bc)
-	echo "rapport de recuperation de $PWD, echo Total "$SIZE"Mb soit "$SIZEGB"Gb et donc "$SIZECALC"Mb recupere sur le dernier quart d heure." | mailx -s "recuperation $PWD" -a "/tmp/rapport.txt" xxx@gmail.com
+	echo "Notification about $PWD, echo Total "$SIZE"Mb, "$SIZEGB"Gb, "$SIZECALC"Mb Transfered last quarter." | mailx -s "Transfert $PWD" -a "/tmp/rapport.txt" xxx@gmail.com
 export quart="0"
 fi
 
