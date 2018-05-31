@@ -15,13 +15,13 @@ export SIZECALC=$(echo "$SIZE"-"$SIZETMP" | bc)
 
 
 if [ "$SIZECALC" = "0" ]; then
-echo "Total : "$SIZE"Mb soit "$SIZEGB"Gb, nous n avons rien recupere sur le dernier quart d heure."
+echo "Total : "$SIZE"Mb, "$SIZEGB"Gb, We didn t transfert anything last quarter."
 else
-echo "Total : "$SIZE"Mb soit "$SIZEGB"Gb et donc "$SIZECALC"Mb recupere sur le dernier quart d heure."
+echo "Total : "$SIZE"Mb, "$SIZEGB"Gb, "$SIZECALC"Mb Transfered last quarter."
 fi
 echo " "
 echo "---------------------------------"
-echo "Voici ce qui se trouve dans $PWD"
+echo "What is in $PWD"
 echo " "
 function comptage {
 	echo "$type : `find $PWD -iname "*.$type" | wc -l`"
@@ -142,9 +142,9 @@ comptage
 vide
 vide
 
-echo "Nombre de fichier (tout format confondu): `find $PWD -iname "*.*" | wc -l`"
+echo "Total of files (all format included): `find $PWD -iname "*.*" | wc -l`"
 
-echo "Total : "$SIZE"Mb soit "$SIZEGB"Gb."
+echo "Total : "$SIZE"Mb, "$SIZEGB"Gb."
 vide
 vide
 
@@ -173,7 +173,7 @@ if [ "$heures" -gt "23" ] ; then
 	export heures="0"
 fi
 
-echo ""$jour"jour(s), "$heures"heure(s) : "$minutes"minute(s) depuis le lancement de ce script."
+echo ""$jour"Day(s), "$heures"Hour(s) : "$minutes"Minute(s) since the beggening of execution."
 echo "Pc allume depuis `uptime -p`"
 
 if [ "$quart" = "" ] ; then
