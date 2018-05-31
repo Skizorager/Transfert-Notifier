@@ -37,7 +37,7 @@ function vide {
 }
 
 carre
-echo "Photos - Images"
+echo "Pictures"
 carre
 
 type="jpg"
@@ -112,7 +112,7 @@ comptage
 
 vide
 carre
-echo "Documents Office - Outlook"
+echo "Office Documents - Outlook"
 carre
 
 type="doc*"
@@ -194,16 +194,14 @@ fi
 
 vide
 
-echo "Minute passee sur le quart d'heure (envoi a 15/15) : $quart/15"
+echo "Time eslaped since last quarter (send at 15/15) : $quart/15"
 vide
 if [ -z $NBMAIL ]; then
 	export NBMAIL="0"
 fi
-echo "le rapport a ete envoyer $NBMAIL fois par mail."
+echo "You have been notified $NBMAIL times by mail."
 
 vide
 
-#echo ""$heures"h : "$minutes"m depuis le lancement de ce script."
-#echo "Pc allume depuis `uptime -p`"
 sleep 1m
 exec $0
