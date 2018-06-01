@@ -1,8 +1,8 @@
+#!/bin/bash
 clear
 rm -rf /tmp/rapport.txt
 exec > >(tee -i /tmp/rapport.txt)
 exec 2>&1
-#!/bin/bash
 
 export SIZE=$(du -sh --block-size=1M $PWD | cut -f 1)
 export SIZEGB=$(echo "scale=2; `du -sh --block-size=1M $PWD | cut -f 1` / 1000" | bc)
