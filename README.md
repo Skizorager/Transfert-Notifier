@@ -6,3 +6,8 @@ You need a working mail client to work.
 This script run in linux terminal with bash, it cause error with sh.
 
 You need to run the script in the destination folder.
+
+dependencies :
+
+- msmtp (mail client, working with mailx)
+- bc (to do mathematic stuff)
